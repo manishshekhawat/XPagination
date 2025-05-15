@@ -20,8 +20,8 @@ function App() {
           console.log("error occured");
         }
       } catch (error) {
-        console.log(error);
-        return error;
+        console.alert("failed to fetch data");
+    
       }
     };
 
@@ -133,6 +133,7 @@ function App() {
           <button
             type="button"
             onClick={handleNextButton}
+            disabled={page==totalPages}
             style={{
               width: "80px",
               height: "30px",
