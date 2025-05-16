@@ -15,6 +15,7 @@ function App() {
 
         if (data) {
           setTableData(data);
+          setPage(1)
           console.log(data);
         } else {
           console.log("error occured");
