@@ -34,15 +34,27 @@ function App() {
   const lastIndex=startIndex+itemPerPage;
   const currentData=tableData.slice(startIndex,lastIndex);
 
-  const handlePreviousButton = () => {
-    if (page != 1) {
-      setPage((prev)=>Math.max(prev-1,1));
+//   const handlePreviousButton = () => {
+//     if (page != 1) {
+//       setPage((prev)=>Math.max(prev-1,1));
+//     }
+//   };
+
+//   const handleNextButton = () => {
+//   setPage((prev) => Math.min(prev + 1, totalPages));
+// };
+
+const handleNextButton = () => {
+    if (page < totalPages) {
+      setPage(page + 1);
     }
   };
 
-  const handleNextButton = () => {
-  setPage((prev) => Math.min(prev + 1, totalPages));
-};
+  const handlePreviousButton = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
 
   return (
     <>
