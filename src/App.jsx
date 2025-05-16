@@ -35,7 +35,7 @@ function App() {
 
   const handlePreviousButton = () => {
     if (page != 1) {
-      setPage(page);
+      setPage((prev)=>Math.max(prev-1,1));
     }
   };
 
