@@ -20,7 +20,7 @@ function App() {
           console.log("error occured");
         }
       } catch (error) {
-        console.alert("failed to fetch data");
+        alert("failed to fetch data");
     
       }
     };
@@ -35,7 +35,7 @@ function App() {
 
   const handlePreviousButton = () => {
     if (page != 1) {
-      setPage(page - 1);
+      setPage(page);
     }
   };
 
