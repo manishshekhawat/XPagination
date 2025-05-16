@@ -41,11 +41,8 @@ function App() {
   };
 
   const handleNextButton = () => {
-    if(page<totalPages){
-      setPage(page + 1);
-    }
-    
-  };
+  setPage((prev) => Math.min(prev + 1, totalPages));
+};
 
   return (
     <>
